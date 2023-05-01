@@ -1,0 +1,79 @@
+h1{
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px gray solid;
+    padding: 20px;
+    margin: 0px;
+  }
+
+ol{
+    border-right: 1px gray solid;
+    width: 100px;
+    padding: 20px;
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+@media (min-width: 1920px) and (min-height: 1080px){
+    #grid{
+        display: block;
+    }
+
+    #grid ol{
+        border-right: none;
+    }
+    h1{
+        border-bottom: none;
+    }
+}
+@media (max-width: 768px) and (max-height: 1024px){
+    #grid{
+        display: block;
+    }
+
+    #grid ol{
+        border-right: none;
+    }
+    h1{
+        border-bottom: none;
+    }
+    h1::before{
+        content: "태블릿";
+    }
+    img{
+        width: 50%;
+    }
+}
+@media (max-width: 620px) and (max-height: 480px){
+    #grid{
+        display: block;
+    }
+
+    #grid ol{
+        border-right: none;
+    }
+    h1{
+        border-bottom: none;
+    }
+    h1::before{
+        content: "휴대폰";
+    }
+    img{
+        width: 100%;
+    }
+    ol{
+        font-size: 130%;
+    }
+    h2{
+        font-size: 300%;
+        text-align: center;
+    }
+}
